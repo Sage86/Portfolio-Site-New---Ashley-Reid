@@ -19,13 +19,12 @@ header {
   background-color: #A8C1B7;
   text-align: center;
   padding: 20px;
-  margin: 10px;
   padding-top: 10px;
   padding-right: 5px;
   padding-bottom: 10px;
   padding-left: 5px;
-  position: relative;
   }
+
 
 .smaller-image {
   max-width: 250px;
@@ -35,10 +34,17 @@ header {
   padding-top: 10px;
 }
 
-.logo {
-  max-width: 250px;
+#heroh1 {
+  background-color: #A8C1B7;
+  text-align: center;
+  padding: 20px 0;
+  display: inline-block;
+  margin-top: inherit;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
 }
-
 
 header li {
   display: inline;
@@ -47,7 +53,7 @@ header li {
 }
 
 nav {
-  width: auto;
+  width: 100;
   display: inline-block;
   font-variant: small-caps;
 }
@@ -73,10 +79,15 @@ ul.no-bullets {
 
 /* Hero section */
 #hero {
-  background-color: #A8C1B7;
+  background-color: #ffffff;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
+
+}
+
+#hero {
+  text-align: center;
 }
 
 #container-hero {
@@ -95,9 +106,7 @@ ul.no-bullets {
 }
 
 
-#hero {
-  text-align: center;
-}
+
 
 
 div.a {
@@ -406,4 +415,40 @@ a:active { /* selected link */
   border-radius: 3px;
   border-bottom: 2px solid #54977B; /* width of the border, type, color */
   transition: 0.2s opacity;
+}
+
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    font-variant: small-caps;
+    margin-top: 4px;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
 }
