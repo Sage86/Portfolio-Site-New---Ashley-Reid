@@ -167,6 +167,8 @@ ext-align: left;
 
 
 
+
+
 /* ADD MARGIN AT TOP AND BOTTOM */
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
@@ -232,7 +234,8 @@ font-weight: 400;
 
 /* IMAGES */
 img {
-  width: 100%;
+  width: 300px;
+  height: 350px;
 }
 
 
@@ -248,6 +251,13 @@ img {
 #Perennial {
   text-align: left;
 }
+
+
+
+#berlin-animation {
+  text-align: left;
+}
+
 
 #Appetite {
   text-align: left;
@@ -335,6 +345,21 @@ img {
 text-align: left;
 }
 
+#toolsused {
+text-align: left;
+}
+
+#Appetite_Taupe {
+ height: 50%;
+ width: 50%;
+ max-width: 50px;
+ max-height: 50px;
+}
+
+
+
+
+
 .getintouch {
 text-align: center; /* Centers text */
 }
@@ -342,6 +367,57 @@ text-align: center; /* Centers text */
 #footer p {
   text-align: center; /* Centers text */
 }
+
+
+/*ANIMATION */
+#berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+}
+
+/*Sun */
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*Cloud Front */
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+/*Cloud Back */
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 20s cloud-move-reverse infinite alternate linear;
+}
+/*ANIMATION */
+
+
+
 
 
 /* FOOTER - SOCIAL MEDIA */
@@ -423,8 +499,64 @@ a:active { /* selected link */
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #54977B; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
+
+.col-container-main {
+  padding: 10px;
+  margin: 0 10px;
+  border-bottom: 1px solid black;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    padding: 20px 0 13px;
+  }
+
+  .header1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    font-variant: small-caps;
+    margin-top: 4px;
+  }
+
+  .col-container-main {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin: 0 10px 10px 10px;
+  }
+
+  /* Create two equal columns that floats next to each other */
+.col-md-6 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
 
 
 /* ==============================
@@ -467,6 +599,27 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 }
+.col-md-5 {
+  width: 40%;
+}
+
+.col-md-7 {
+  width: 40%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* ==============================
 X-large devices (1440px or larger)
