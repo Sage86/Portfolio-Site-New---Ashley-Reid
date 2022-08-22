@@ -17,7 +17,6 @@ Seventh Colour (Dark Sage) #54977B;
 
 header {
   background-color: #A8C1B7;
-  text-align: center;
   padding: 20px;
   padding-top: 10px;
   padding-right: 5px;
@@ -26,6 +25,39 @@ header {
   position: fixed;
   width: 100%;
   box-shadow: 0 4px 6px -6px #222;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: none;
+  }
+
+  .navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+
+  .navtoggle.responsive li  {
+    display: block;
+  }
+
+  .navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+  .navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
+    padding-right: 0;
   }
 
 
@@ -56,11 +88,7 @@ header li {
   margin-left: auto;
 }
 
-nav {
-  width: 100%;
-  display: inline-block;
-  font-variant: small-caps;
-}
+
 
 /* HEADER - HERO */
 .header {
@@ -73,15 +101,7 @@ text-align: unset;
 }
 
 
-/* Navigation bar */
-.ulno-bullets {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-}
+
 
 /* Hero section */
 #hero {
@@ -176,6 +196,8 @@ ext-align: left;
 
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 #about .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#contact .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+
 
 
   /* BUTTONS */
@@ -280,6 +302,10 @@ img {
 }
 
 #about {
+  text-align: center;
+}
+
+#contact {
   text-align: center;
 }
 
@@ -512,15 +538,12 @@ a:active { /* selected link */
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     padding: 20px 0 13px;
   }
 
-  .header1 {
-    display: flex;
-    justify-content: center;
-  }
+
 
   nav {
     width: auto;
@@ -528,6 +551,19 @@ Medium devices (640px and larger)
     font-variant: small-caps;
     margin-top: 4px;
   }
+
+  /* Navigation bar */
+  .ulno-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 4px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .navtoggle li:not(:last-child) {
+  display: inline-block;
+}
 
   .col-container-main {
     display: flex;
@@ -572,8 +608,12 @@ Medium devices (640px and larger)
     width: auto;
     float: right;
     font-variant: small-caps;
-    margin-top: 4px;
+    margin: 1em 0;
   }
+}
+
+.navtoggle li:last-child {
+  display: none;
 }
 
 /* Create two equal columns that floats next to each other */
